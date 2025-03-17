@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>AJ Bank</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AJ Bank</h1>
+            <p>Simple and Secure Banking</p>
+        </header>
+
+        <!-- Home Page -->
+        <div id="homePage" class="page active">
+            <div class="welcome-message">
+                <h2>Welcome to AJ Bank</h2>
+                <p>Please login or register to access your account</p>
+            </div>
+            <div class="home-buttons">
+                <button id="showLoginBtn" class="btn primary">Login</button>
+                <button id="showRegisterBtn" class="btn secondary">Register</button>
+            </div>
+        </div>
+
+        <!-- Login Form -->
+        <div id="loginPage" class="page">
+            <h2>Login to Your Account</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginUsername">Username:</label>
+                    <input type="text" id="loginUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn primary">Login</button>
+                <button type="button" class="btn back" id="loginBackBtn">Back</button>
+            </form>
+        </div>
+
+        <!-- Register Form -->
+        <div id="registerPage" class="page">
+            <h2>Create an Account</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="registerUsername">Username:</label>
+                    <input type="text" id="registerUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Password:</label>
+                    <input type="password" id="registerPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <button type="submit" class="btn primary">Register</button>
+                <button type="button" class="btn back" id="registerBackBtn">Back</button>
+            </form>
+        </div>
+
+        <!-- Account Dashboard -->
+        <div id="dashboardPage" class="page">
+            <h2>Account Dashboard</h2>
+            <div class="user-info">
+                <p>Welcome, <span id="usernameDisplay"></span></p>
+                <p>Balance: $<span id="balanceDisplay">1000.00</span></p>
+            </div>
+            <div class="dashboard-actions">
+                <button id="showDepositBtn" class="btn action">Deposit</button>
+                <button id="showWithdrawBtn" class="btn action">Withdraw</button>
+                <button id="logoutBtn" class="btn logout">Logout</button>
+            </div>
+        </div>
+
+        <!-- Deposit Form -->
+        <div id="depositPage" class="page">
+            <h2>Deposit Funds</h2>
+            <form id="depositForm">
+                <div class="form-group">
+                    <label for="depositAmount">Amount to Deposit ($):</label>
+                    <input type="number" id="depositAmount" min="1" step="0.01" required>
+                </div>
+                <button type="submit" class="btn primary">Deposit</button>
+                <button type="button" class="btn back" id="depositBackBtn">Back</button>
+            </form>
+        </div>
+
+        <!-- Withdraw Form -->
+        <div id="withdrawPage" class="page">
+            <h2>Withdraw Funds</h2>
+            <form id="withdrawForm">
+                <div class="form-group">
+                    <label for="withdrawAmount">Amount to Withdraw ($):</label>
+                    <input type="number" id="withdrawAmount" min="1" step="0.01" required>
+                </div>
+                <button type="submit" class="btn primary">Withdraw</button>
+                <button type="button" class="btn back" id="withdrawBackBtn">Back</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 AJ Bank. All rights reserved.</p>
+    </footer>
+    
+    <script src="working.js"></script>
+</body>
+</html>
